@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69BB2393-D171-4A92-9AD7-CDFB786327EA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Ajedrez.My.MyApplication</StartupObject>
+    <RootNamespace>Ajedrez</RootNamespace>
+    <AssemblyName>Ajedrez</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Ajedrez.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Ajedrez.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ajedrez.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajedrez.Designer.vb">
+      <DependentUpon>Ajedrez.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alfil.vb" />
+    <Compile Include="Caballo.vb" />
+    <Compile Include="Inicio.Designer.vb">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Peon.vb" />
+    <Compile Include="Reina.vb" />
+    <Compile Include="Rey.vb" />
+    <Compile Include="Torre.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Ajedrez.resx">
+      <DependentUpon>Ajedrez.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="chessicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="chess.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tablero-classic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alfilblanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alfilnegro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caballoblanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caballonegro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peonblanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peonegro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reinablanca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reinanegra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reyblanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reynegro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tablero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\torreblanca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\torrenegra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resaltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resaltarMov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bMove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\canDie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selection .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wMove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\posibleMov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jaque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mate.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
